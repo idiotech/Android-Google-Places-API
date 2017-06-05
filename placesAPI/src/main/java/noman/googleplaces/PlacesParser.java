@@ -3,7 +3,6 @@ package noman.googleplaces;
 import android.location.Location;
 import android.util.Log;
 import android.util.Pair;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -96,7 +95,7 @@ public class PlacesParser extends Parser {
         place.setTypes(types);
 
         //get vicinity
-        place.setVicinity(jsonPlace.getString(VICINITY));
+        place.setVicinity(jsonPlace.optString(VICINITY));
 
         return place;
     }
